@@ -18,6 +18,8 @@ class Student(People):
         super().__init__(name, age)
         self.registration = registration
 
+    
+
     def presentation(self):
         return f"Meu nome é {self.name} e tenho {self.age} anos! e estou atualmente no curso de {self.registration}"
     

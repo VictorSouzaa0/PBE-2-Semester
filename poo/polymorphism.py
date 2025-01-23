@@ -10,11 +10,15 @@ class Dog():
     def __init__(self, name, food, sleep):
         self.name = name
         self.food = food
-        self.sleep = sleep
+        self.sleeep = sleep
     
     def sniff(self, objeto_qualquer):
         self.objeto = objeto_qualquer
         return f'Farejou {self.objeto}'
+
+    def sleep(self):
+        self.sleeep = False
+        return f'O {self.name} está descansado'
     
 class PoliceDog(Dog):
     def __init__(self, name, food, sleep):
@@ -25,11 +29,12 @@ class PoliceDog(Dog):
         return f'Farejou {self.objeto}'
 
 
-
-
 dog_caramelo = Dog('Nelson', 'Pedigree', 2)
 
 dog_policial = PoliceDog('Godofredo', 'Petisco', 1)
 
 print(dog_caramelo.sniff('Meia'))
 print(dog_policial.sniff('Coisas Ilícitas'))
+print(dog_caramelo.sleep())
+print(dog_policial.sleep())
+
