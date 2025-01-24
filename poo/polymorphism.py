@@ -18,7 +18,7 @@ class Dog():
 
     def sleep(self):
         self.sleeep = False
-        return f'O {self.name} está descansado'
+        return f'O {self.name} está descansado, SEXTOOU '
     
 class PoliceDog(Dog):
     def __init__(self, name, food, sleep):
