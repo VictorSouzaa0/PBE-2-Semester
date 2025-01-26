@@ -1,16 +1,17 @@
+
+
 class Product():
     def __init__(self,name,price,amount):
         self.name = name
         self.price = price
         self.amount = amount
 
-    def calculateStock(self):
-        product = bool(input('Tem produto no seu stock? SIM [True], NAO [False]: '))
-        if product == True:
-            amount = int(input("Quantos produtos tem no seu estoque?:"))
-            price = float(input("Qual valor do seus produtos?: "))
-            self.price = amount * price
-            return f'{self.price}'
+    def totalStock(self):
+        if self.amount == 0:
+            return f'não a produtos em seu stock'
         else:
-            return f'estoque vazio'
-        
+            operation = self.amount * self.price
+            return f'No seu stock há {self.amount} {self.name} e o valor do seu stock está em {operation}'
+
+prod1 = Product(name='Pneu de carro', price=400,amount=50)
+print(prod1.totalStock())
