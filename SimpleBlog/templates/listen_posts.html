@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sla</title>
+</head>
+<body>
+    <h1>BLOG</h1>
+    <ul>
+        {% for postt in posts %}
+        <li>
+        <h2>{{ postt.title }}</h2>
+        <p>{{ postt.content|slice:":200" }}...</p>
+        <p><a href="#">Leia mais</a></p>
+        </li>
+        {% endfor %}
+        </ul>
+    
+</body>
+</html>
