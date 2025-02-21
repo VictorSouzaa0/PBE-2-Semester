@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cars Listing</h1>
+    <a href="{% url 'car_create'%}">Criar um carro</a>
+    <ul>
+        {% for car in cars %}
+        <li>
+            {{ car.brand}} - {{ car.name }}
+            <a href="{% url 'cars-read'%}">Editar</a>
+        </li>
+        <a href="{% url 'cars-confirm_delete'%}">YOU LOSE</a>
+        {% endfor %}
+    </ul>
+</body>
+</html>

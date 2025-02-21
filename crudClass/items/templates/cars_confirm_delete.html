@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELETE BRO</title>
+</head>
+<body>
+    <h1>You are sure</h1>
+    <form  method="post">
+        {% csrf_token %}
+    </form>
+    <a href="{% url 'cars-read'%}">YOU LOSE</a>
+</body>
+</html>

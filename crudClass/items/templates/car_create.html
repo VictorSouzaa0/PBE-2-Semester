@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Create</title>
+</head>
+<body>
+    <H1>Creating Cars</H1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ cars.as.p }}
+    </form>
+    <button type="submit">Save</button>
+    
+</body>
+</html>
