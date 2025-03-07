@@ -1,0 +1,11 @@
+<h1>CRUD PAE</h1>
+<form method='POST'>
+    {% csrf_token %}
+    {{form.name}}
+    <input type='submit' value="Submit">
+</form>
+{%for ever in ever_all%}
+<p>{{ever}}</p>
+<a href="{% url 'update'alll.id %}">Update</a>
+<a href="">Delete</a>
+{% endfor %}
