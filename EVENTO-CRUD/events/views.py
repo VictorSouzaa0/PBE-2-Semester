@@ -26,3 +26,17 @@ def evento_selecionado(resquet,pk):
         return Response(status=status.HTTP_404_NOT_FOUND)
     serializer = EventoSerializers(evento)
     return Response(serializer.data)
+
+@api_view(['POST'])
+
+def editar_evento(request,pk):
+    try:
+        event_atualziado = Evento.objects.get(pk=pk)
+    except Evento.DoesNotExist:
+        return Response(status=status.HTTP_400_BAD_REQUEST)
+    serializer = EventoSerializers(event_atualziado,data=request.data)
+    
+    if serializer.is_valid():
+       serializer.save()
+       return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
+    
