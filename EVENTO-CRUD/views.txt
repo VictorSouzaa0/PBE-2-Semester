@@ -14,5 +14,3 @@ def todos_eventos(request):
         serializer = EventoSerializers(eventos, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     return Response(status=status.HTTP_400_BAD_REQUEST)
-
-    query params
