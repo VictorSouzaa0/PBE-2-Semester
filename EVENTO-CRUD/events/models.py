@@ -1,0 +1,17 @@
+from django.db import models
+
+class Evento(models.Model):
+    Nome =  models.CharField(max_length=255)
+    Descrição = models.TextField()
+    Data_Hora = models.DateField()
+    Hora = models.TimeField()
+    Local = models.CharField(max_length=255)
+    CHOICES = {
+    "Música": "Música",
+    "Palestra": "Palestra",
+    "Workshop": "Workshop"
+    }
+    Categoria = models.CharField(max_length=10,choices=CHOICES)
+
+    def __str__(self):
+        return f"Evento: {self.Nome} | Local {self.Hora}"
